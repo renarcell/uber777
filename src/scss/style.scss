@@ -1,7 +1,14 @@
 @font-face { 
     font-family: "Roboto";
-    src: url(../fonts/Roboto/Roboto-Light.ttf) format("truetype");
+    src: url(../fonts/Roboto/Roboto-Regular.ttf) format("truetype");
     font-weight: 400;
+    font-style: normal;
+}
+
+@font-face { 
+    font-family: "Roboto";
+    src: url(../fonts/Roboto/Roboto-Light.ttf) format("truetype");
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -14,7 +21,29 @@
 	width: 1140px;
 }
 
+.label {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(0, 0, 0);
+	width: 112px;
+	height: 24px;
+	color: white;
+	margin: 0 auto;
+	font-size: 11px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.label_white {
+	background-color: white;
+	color: black;
+}
+
+
+
 header {
+	// position: fixed;
 	height: 50px;
 	background-color: #212121;
 	.menu {
@@ -59,21 +88,232 @@ header {
 	.logo-descr {
 		font-size: 13px;
 		color: rgba(255, 255, 255, 0.502);
-		text-align: left;	  
+		text-align: left;
+		margin-top: 6px;  
 	}
 	.call-us-text {
 		font-size: 12px;
 		color: rgb(255, 255, 255);
 		text-align: right;
+		margin-top: 23px;
 	}
 	.phone {
 		font-size: 22px;
+		line-height: 22px;
 		color: rgb(255, 255, 255);
 		text-transform: uppercase;
 		text-align: center; 
+		margin-top: 9px;
+	}
+
+	.btn-call {
+		background: linear-gradient(#4be1fe, #21b0cb);
+		border: none;
+		border-radius: 4px;
+		box-shadow: none;
+		width: 174px;
+		height: 48px;
+		margin-top: 19px;
+		font-size: 14px;
+		color: rgb(255, 255, 255);
+		text-transform: uppercase;
+		text-align: center;
+		text-shadow: 0.707px 0.707px 0px rgba(0, 0, 0, 0.21);
+		cursor: pointer;
 	}
 }
 
 .promo {
 	padding-top: 151px;
+	background: url(../img/promo/bg.png) center center/cover no-repeat;
+	min-height: 748px;
+	.title {
+		font-size: 60px;
+		color: rgb(255, 255, 255);
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	.invite-drivers {
+		font-size: 36px;
+		color: rgb(255, 255, 255);
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	.company-descr {
+		font-size: 18px;
+		color: rgb(255, 255, 255);
+		line-height: 1.333;
+		text-align: center; 
+	}
+
+	.btn-send {
+		display: block;
+		margin: 0 auto;
+		background: linear-gradient(#4be1fe, #21b0cb);
+		border: none;
+		border-radius: 4px;
+		height: 62px;
+		width: 260px;
+		box-shadow: none;
+		font-size: 18px;
+		color: rgb(255, 255, 255);
+		text-transform: uppercase;
+		text-align: center;
+		text-shadow: 0.707px 0.707px 0px rgba(0, 0, 0, 0.21);
+		margin-top: 118px;
+	}
+}
+
+section.advantages {
+	padding-top: 71px;
+	min-height: 900px;
+	.title-reasons {
+		font-size: 38px;
+		color: rgb(34, 34, 34);
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+		line-height: 26px;
+		margin-top: 36px;
+	}
+	.row {
+		margin-top: 32px;
+	}
+	.advantage {
+		width: 494px;
+		&-text {
+			line-height: 21px;
+			width: 346px;
+		}
+		&__circle {
+			display: flex;
+			flex-shrink: 0;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			background-color: rgb(30, 172, 199);
+			width: 113px;
+			height: 113px;
+			
+		}
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		&__title {
+			font-size: 17px;
+			color: #1eacc7;
+		}
+		&__descr {
+			font-size: 15px;
+			font-weight: 300;
+		}
+	}
+}
+
+.capabilities {
+	background: url(../img/capabilities/bg.png) center center/cover no-repeat;
+	padding-top: 48px;
+	min-height: 864px;
+	.title {
+		font-size: 38px;
+		color: rgb(34, 34, 34);
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+		line-height: 26px;
+		margin-top: 36px;
+	  }
+	&_descr {
+	font-size: 17px;
+	color: rgb(34, 34, 34);
+	text-align: center;
+	margin-top: 23px;
+	}
+	&_group {
+		margin-top: 36px;
+	}
+
+	.capability {
+		position: relative;
+		width: 320px;
+		height: 280px;
+		padding-top: 91px;
+		margin-bottom: 19px;
+		&_1 {
+			background: url(../img/capabilities/cap1.png) center center/cover no-repeat;
+		}
+		&_2 {
+			background: url(../img/capabilities/cap2.png) center center/cover no-repeat;
+		}
+		&_3 {
+			background: url(../img/capabilities/cap3.png) center center/cover no-repeat;
+		}
+		&_4 {
+			background: url(../img/capabilities/cap4.png) center center/cover no-repeat;
+		}
+		&_5 {
+			background: url(../img/capabilities/cap5.png) center center/cover no-repeat;
+		}
+		&_6 {
+			background: url(../img/capabilities/cap6.png) center center/cover no-repeat;
+		}
+		&_text {
+			font-size: 24px;
+			color: rgb(255, 255, 255);
+			text-transform: uppercase;
+			text-align: center;
+		}
+		&_round {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			background-color: rgb(0, 0, 0);
+			position: absolute;
+			left: 50%;
+			bottom: 35px;
+			transform: translateX(-50%);
+			width: 26px;
+			height: 26px;
+			z-index: 95;  
+		}
+	}
+}
+
+.choose-car {
+	min-height: 895px;
+	padding-top: 56px;
+	background: url(../img/choose_car/second_bg.png) bottom center no-repeat;
+	background-color: #070716;
+	.title {
+		font-size: 38px;
+		color: rgb(255, 255, 255);
+		font-weight: bold;
+		line-height: 80%;
+		text-transform: uppercase;
+		text-align: center;
+		margin-top: 30px;
+	}
+	.choose_descr {
+		font-size: 17px;
+		color: rgb(255, 255, 255);
+		line-height: 80%;
+		text-align: center;
+		margin-top: 19px;
+	}
+	.uberx-car {
+		display: block;
+		margin: 0 auto;
+		margin-top: 60px;
+	}
+	.better-car {
+		font-size: 17px;
+		color: rgb(34, 34, 34);
+		line-height: 1.412;
+		text-align: center;
+		margin-top: 5px;
+	}
 }
